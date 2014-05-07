@@ -1,0 +1,87 @@
+
+
+* {
+  margin: 0; 
+  padding: 0; 
+}
+body { 
+  font-size: 62.5%; 
+  font-family: 'Lucida Grande', Helvetica, sans-serif;
+  background: #121212;
+  color: #222; 
+  padding: 20px;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+button .add_to_cookbook {
+  margin: 0 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #bbb;
+}
+
+a:hover {
+  color:#ddd;
+}
+
+a:visited {
+  color:#ddd;
+}
+
+table {
+  margin-top: 50px;
+}
+tr { 
+  vertical-align: bottom;
+}
+
+img {
+  margin-left: 300px;
+}
+.img_cookbook {
+  height: 200px;
+}
+
+.picture { 
+  height: 600px; 
+}
+
+p { 
+  font-size: 1.2em; 
+  margin: 0 0 15px 0; 
+}
+
+h1 { 
+  font-family: Sans-serif; 
+  font-size: 4.0em;
+  letter-spacing: 1px; 
+  color: #ccc; 
+}
+
+h3 {
+  font-family: Sans-serif; 
+  font-size: 3.0em;
+}
+
+.navbar {
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+}
+.col {
+  width:100%;
+  display: inline-block;
+}

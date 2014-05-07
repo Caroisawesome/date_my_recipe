@@ -1,0 +1,14 @@
+
+<table>
+  <% @cookbook.recipes.each do |recipe| %>
+    <tr>
+      <td>
+        <div class='recipe' id='recipe_<%=recipe.id%>'>
+        <img id='#img_cookbook' src='<%= recipe.img_url %>'>
+      		<li><h3><a href='<%= recipe.recipe_url %>' target="_blank"><%= recipe.name %></a><h3><button class='delete'>remove</button></li>
+      	</div>
+      </td>
+    </tr>
+ 
+  <% end %>
+</table>

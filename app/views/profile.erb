@@ -1,0 +1,18 @@
+<div class='container'>
+	<h1>Welcome <%= @user.username.capitalize %> </h1>
+
+<div class="col">
+	<form action="/logout" method="post">
+		<input type="submit" value="Log Out!">
+	</form>
+  <form id='food_submit' action="/foods" method='post'>
+    <input type="text" name="name" placeholder="Add a food item...">
+    <input  type="submit" value="View Recipes!">
+  </form>
+  <button id="cookbook"><%= @user.username.capitalize %>'s Cookbook</button>
+</div>
+</div>
+
+<div id='view_recipes' class="col">
+  
+</div>
