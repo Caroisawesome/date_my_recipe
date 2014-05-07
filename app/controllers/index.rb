@@ -4,6 +4,7 @@ get '/' do
 end
 
 post '/login' do
+  # Nice use of these partials for ajax calls!
   erb :_login, :layout => false
 end
 
@@ -19,7 +20,8 @@ post '/signup_user' do
   redirect "/users/#{@user.username}"
 end
 
-post '/login_user' do 
+post '/login_user' do
+  #You might want to consider pulling this logic into a helper? 
   @user = User.find_by_username(params[:username])
   if @user.password = params[:password]
     session[:id] = @user.id
