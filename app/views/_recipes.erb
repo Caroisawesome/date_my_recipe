@@ -1,4 +1,4 @@
-<table>
+<table id="recipe_table">
 	<tr>
 		<% @recipes.each do |recipe| %>
 		<td><img class='picture' src='<%= recipe.img_url %>'>
@@ -6,7 +6,7 @@
 		<td>
 			<h3><a href='<%= recipe.recipe_url %>' target="_blank"><%= recipe.name %></a></h3><br>
 			<button class="add_to_cookbook" id='<%=recipe.id%>'><p>Add To Cookbook!</p></button>
-			</td>	
+			</td>
 			<% end %>
 	</tr>
 </table>

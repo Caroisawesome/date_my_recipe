@@ -3,7 +3,7 @@ get "/users/:username" do
   erb :profile
 end
 
-post '/recipes' do 
+post '/recipes' do
   @user = User.find(session[:id])
   @food = Food.find_by_name(params[:name])
   if @food == nil
@@ -25,7 +25,7 @@ post '/recipes' do
   erb :_recipes, :layout => false
 end
 
-post '/add/:recipe_id' do 
+post '/add/:recipe_id' do
   @cookbook = Cookbook.find_by_user_id(session[:id])
   @recipe = Recipe.find(params[:recipe_id])
   Eat.create(cookbook_id: @cookbook.id, recipe_id: @recipe.id)
@@ -33,8 +33,13 @@ post '/add/:recipe_id' do
 end
 
 
-post '/cookbook' do 
+post '/cookbook' do
   @cookbook = Cookbook.find_by_user_id(session[:id])
   p @cookbook.recipes
   erb :_cookbook, :layout => false
+end
+
+delete '/delete/:id' do
+  @recipe = Eat.find_by_recipe_id(params[:id]).destroy
+  params[:id].to_json
 end

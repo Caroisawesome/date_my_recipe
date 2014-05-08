@@ -1,15 +1,19 @@
 
 
 * {
-  margin: 0; 
-  padding: 0; 
+  margin: 0;
+  padding: 0;
 }
-body { 
-  font-size: 62.5%; 
+
+body {
+  font-size: 62.5%;
   font-family: 'Lucida Grande', Helvetica, sans-serif;
   background: #121212;
-  color: #222; 
-  padding: 20px;
+  color: #222;
+}
+
+form {
+  display:inline;
 }
 
 input {
@@ -24,7 +28,7 @@ button {
   border-radius: 5px;
 }
 
-button .add_to_cookbook {
+.add_to_cookbook {
   margin: 0 30px;
 }
 
@@ -44,35 +48,40 @@ a:visited {
 table {
   margin-top: 50px;
 }
-tr { 
+
+tr {
   vertical-align: bottom;
+}
+
+#navlist li {
+  display: inline;
 }
 
 img {
   margin-left: 300px;
 }
 .img_cookbook {
-  height: 200px;
+  width: 20%;
 }
 
-.picture { 
-  height: 600px; 
+.picture {
+  height: 600px;
 }
 
-p { 
-  font-size: 1.2em; 
-  margin: 0 0 15px 0; 
+p {
+  font-size: 1.2em;
+  margin: 0 0 15px 0;
 }
 
-h1 { 
-  font-family: Sans-serif; 
+h1 {
+  font-family: Sans-serif;
   font-size: 4.0em;
-  letter-spacing: 1px; 
-  color: #ccc; 
+  letter-spacing: 1px;
+  color: #ccc;
 }
 
 h3 {
-  font-family: Sans-serif; 
+  font-family: Sans-serif;
   font-size: 3.0em;
 }
 
@@ -80,8 +89,8 @@ h3 {
   width: 100%;
   display: inline-block;
   text-align: right;
+  background-color: blue;
+  position:fixed;
+  vertical-align: bottom;
 }
-.col {
-  width:100%;
-  display: inline-block;
-}
+

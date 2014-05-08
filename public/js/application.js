@@ -4,6 +4,7 @@ $(document).ready(function() {
   $('#login').on('click', logIn);
   $('#cookbook').on('click', viewCookbook);
   $('#food_submit').on('submit', viewRecipes);
+  $('body').on('click', '.delete', deleteItem);
 });
 
 function profileLayout() {
@@ -26,8 +27,9 @@ function viewRecipes() {
 }
 
 function appendRecipe(recipePartial) {
+	$('.picture')[0].parentElement.parentElement.parentElement.parentElement.remove();
 	$('#view_recipes').append(recipePartial)
-  $('.add_to_cookbook').on('click', addToCookbook);	
+  $('.add_to_cookbook').on('click', addToCookbook);
 }
 
 // MY COOKBOOK
@@ -56,13 +58,22 @@ function viewCookbook() {
 }
 
 function appendCookbook(cookbookPartial) {
-	$('table').remove();
+	$('#recipe_table').remove();
 	$('#view_recipes').append(cookbookPartial);
-  $('.delete').on('click', deleteItem);
 }
 
 function deleteItem() {
-	
+	console.log("remove")
+	var response = $.ajax({
+		url: '/delete/'+this.classList[0],
+		type: 'DELETE'
+	})
+	response.done(removeItem)
+}
+
+function removeItem(id) {
+	id = JSON.parse(id)
+	$("."+id)[0].parentElement.parentElement.remove();
 }
 
 
