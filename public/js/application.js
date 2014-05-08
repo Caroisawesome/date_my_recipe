@@ -27,7 +27,7 @@ function viewRecipes() {
 }
 
 function appendRecipe(recipePartial) {
-	$('.picture')[0].parentElement.parentElement.parentElement.parentElement.remove();
+	$('#cookbook_table').remove()
 	$('#view_recipes').append(recipePartial)
   $('.add_to_cookbook').on('click', addToCookbook);
 }
