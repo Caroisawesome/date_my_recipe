@@ -11,15 +11,14 @@ post '/signup' do
   erb :_signup, :layout => false
 end
 
-post '/signup_user' do 
+post '/signup_user' do
   @user = User.create(params)
   @cookbook = Cookbook.create(user_id: @user.id)
-  p @cookbook
   session[:id] = @user.id
   redirect "/users/#{@user.username}"
 end
 
-post '/login_user' do 
+post '/login_user' do
   @user = User.find_by_username(params[:username])
   if @user.password = params[:password]
     session[:id] = @user.id
