@@ -57,7 +57,6 @@ function viewCookbook() {
 
 function appendCookbook(cookbookPartial) {
 	$("#view_recipes").empty();
-	// $('#recipe_table').remove();
 	$('#view_recipes').append(cookbookPartial);
 }
 
