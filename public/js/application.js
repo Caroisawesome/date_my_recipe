@@ -9,7 +9,6 @@ $(document).ready(function() {
 
 function profileLayout() {
 	$(function(){
-		$("#page-wrap").wrapInner("<table cellspacing='30'><tr>");
 		$(".picture").wrap("<td>");
 	});
 }
@@ -27,7 +26,8 @@ function viewRecipes() {
 }
 
 function appendRecipe(recipePartial) {
-	$('#cookbook_table').remove()
+	$('#view_recipes').empty()
+	// $('#cookbook_table').remove()
 	$('#view_recipes').append(recipePartial)
   $('.add_to_cookbook').on('click', addToCookbook);
 }
@@ -35,7 +35,6 @@ function appendRecipe(recipePartial) {
 // MY COOKBOOK
 
 function addToCookbook() {
-	console.log("you workin?")
 	var response = $.ajax({
 		url: '/add/'+this.id,
 		type: 'POST'
@@ -49,7 +48,6 @@ function appendAddButton(elementId) {
 }
 
 function viewCookbook() {
-	console.log("yay")
 	var response = $.ajax({
 		url: '/cookbook',
 		type: 'POST'
@@ -58,7 +56,8 @@ function viewCookbook() {
 }
 
 function appendCookbook(cookbookPartial) {
-	$('#recipe_table').remove();
+	$("#view_recipes").empty();
+	// $('#recipe_table').remove();
 	$('#view_recipes').append(cookbookPartial);
 }
 
