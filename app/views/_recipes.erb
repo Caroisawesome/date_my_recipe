@@ -4,14 +4,11 @@
 		<td>
 			<ul>
 				<li><img class='picture' src='<%= recipe.img_url %>'></li>
-				<li><h3><a href='<%= recipe.recipe_url %>' target="_blank"><%= recipe.name %></a></h3></li>
-				<li><button class="add_to_cookbook" id='<%=recipe.id%>'><p>Add To Cookbook!</p></button>
-				</li>
+				<li><button class="add_to_cookbook" id='<%=recipe.id%>'><p>Add To Cookbook!</p></button><h3><a href='<%= recipe.recipe_url %>' target="_blank"><%= recipe.name %></a></h3></li>
+				<!-- <li>
+				</li> -->
 			</ul>
 		</td>
-		<!-- <td>
-
-						</td> -->
 			<% end %>
 	</tr>
 </table>

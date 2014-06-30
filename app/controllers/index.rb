@@ -29,6 +29,6 @@ post '/login_user' do
 end
 
 post '/logout' do
-  session[:id] = nil
+  session.clear
   redirect '/'
 end

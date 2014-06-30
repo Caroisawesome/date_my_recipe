@@ -92,6 +92,10 @@ h3 {
   padding-top: 10%;
 }
 
+/*#cookbook_table {
+  padding-top: 50%;
+}*/
+
 .navbar {
   width: 100%;
   display: inline-block;
@@ -99,6 +103,5 @@ h3 {
   background-color: blue;
   position:fixed;
   vertical-align: top;
-  margin-top: 0;
 }
 
