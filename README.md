@@ -1,24 +1,11 @@
-### Purpose
-The Sinatra Skeleton:
+### Date My Recipe
 
-1. Provides a foundation for building challenges.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
-4. Demonstrates that it is not **required** that all models in `app/models` be
-   `ActiveRecord` backed!
-5. Gives bare-bones RSpec skeleton wherewith to start building the practice of testing
+Are you cooking the same thing every day? Are your meals getting repetitive and old?
+Are you going through a food ingredient phase, and want to find ALL OF THE RECIPES that include that food ingredient?
+Do you want to spice up your life?
 
-### Quickstart
+If you said YES to any of those questions, then you should try Date My Recipe!
 
-1.  `bundle install`
-2.  `shotgun config.ru`
+Sign up, enter a food ingredient, and browse through dozens of recipes to see if anything looks too delicious to be true. View any recipe immediately, AND/OR save it for later by adding it to your cookbook. Next time you log in, all of your favorite recipes will be hanging out, just waiting for you to use them!
 
-### Contributing
-
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
-
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
-
-Be prepared to give and receive specific, actionable, and kind feedback!
+Using the Food2Fork API, Date My Recipe is a web application that allows users to search for an ingredient, browse recipes, and save results that seem interesting.
