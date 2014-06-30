@@ -44,7 +44,7 @@ function addToCookbook() {
 
 function appendAddButton(elementId) {
 	var id = JSON.parse(elementId)
-	$('#'+id).append('<p>SUCCESS!</p>');
+	$('#'+id).empty().append('<p>SUCCESS!</p>');
 }
 
 function viewCookbook() {
@@ -61,7 +61,7 @@ function appendCookbook(cookbookPartial) {
 }
 
 function deleteItem() {
-	console.log("remove")
+
 	var response = $.ajax({
 		url: '/delete/'+this.classList[0],
 		type: 'DELETE'

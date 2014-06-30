@@ -35,7 +35,6 @@ end
 
 post '/cookbook' do
   @cookbook = Cookbook.find_by_user_id(session[:id])
-  p @cookbook.recipes
   erb :_cookbook, :layout => false
 end
 
