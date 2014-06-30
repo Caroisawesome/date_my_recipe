@@ -1,12 +1,17 @@
 <table id="recipe_table">
 	<tr>
 		<% @recipes.each do |recipe| %>
-		<td><img class='picture' src='<%= recipe.img_url %>'>
-		</td>
 		<td>
-			<h3><a href='<%= recipe.recipe_url %>' target="_blank"><%= recipe.name %></a></h3><br>
-			<button class="add_to_cookbook" id='<%=recipe.id%>'><p>Add To Cookbook!</p></button>
-			</td>
+			<ul>
+				<li><img class='picture' src='<%= recipe.img_url %>'></li>
+				<li><h3><a href='<%= recipe.recipe_url %>' target="_blank"><%= recipe.name %></a></h3></li>
+				<li><button class="add_to_cookbook" id='<%=recipe.id%>'><p>Add To Cookbook!</p></button>
+				</li>
+			</ul>
+		</td>
+		<!-- <td>
+
+						</td> -->
 			<% end %>
 	</tr>
 </table>
